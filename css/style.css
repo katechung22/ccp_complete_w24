@@ -622,6 +622,22 @@ img {
         width: 400px;
     }
 
+    .cover {
+        height: 400px;
+        width: 400px;
+        box-sizing: border-box;
+        transition: 1s;
+        cursor: pointer;
+        background: #8ba888;
+        padding-left: 400px;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    .cover:hover {
+        padding: 0px;
+    }
+
     .gallery-photo {
         width: 250px;
         height: 270px;
@@ -691,4 +707,5 @@ img {
         padding: 10px;
         border-image: url("../images/travel_border.png") 30 round;
     }
-  }
+}
+
