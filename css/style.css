@@ -70,6 +70,10 @@ ul.menu {
     margin-left: 0px;
 }
 
+.button a {
+    display: block;
+}
+
 .home {
     grid-column: 1/1;
     list-style-type: none;
