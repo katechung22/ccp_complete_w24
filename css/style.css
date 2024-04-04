@@ -70,76 +70,91 @@ ul.menu {
     margin-left: 0px;
 }
 
-.button a {
+button {
+    background-color: #fbeee0;
+    border: 2px solid #8ba888;
+    border-radius: 30px;
+    box-shadow: #8ba888 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
     display: block;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0 10px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+button:hover {
+    border: 2px solid #8ba888;
+    background-color: #fcccd3;
+}
+
+button:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(3px, 3px);
+    background-color: #cce7fe;
+}
+
+.active {
+    background-color: #cce7fe;
+    font-weight: bolder;
+}
+
+button a {
+    display: block;
+}
+
+.menu li {
+    margin: 0px;
 }
 
 .home {
     grid-column: 1/1;
     list-style-type: none;
-    background-color: #E6E6FA;
     font-size: 22px;
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px; 
     padding-left: 10px;
     padding-right: 10px;
-}
-
-.home:hover {
-    border: 4px solid #301934;
-    background-color: #FFB6C1;
 }
 
 .pets {
     grid-column: 2/2;
     list-style-type: none;
-    background-color: #E6E6FA;
     font-size: 22px;
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px; 
     padding-left: 10px;
     padding-right: 10px;
-}
-
-.pets:hover {
-    border: 4px solid #301934;
-    background-color: #FFB6C1;
 }
 
 .recipe {
     grid-column: 3/3;
     list-style-type: none;
-    background-color: #E6E6FA;
     font-size: 22px;
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px; 
     padding-left: 10px;
     padding-right: 10px;
-}
-
-.recipe:hover {
-    border: 4px solid #301934;
-    background-color: #FFB6C1;
 }
 
 .travel {
     grid-column: 4/4;
     list-style-type: none;
-    background-color: #E6E6FA;
     font-size: 22px;
     text-align: center;
     padding-top: 15px;
     padding-bottom: 15px; 
     padding-left: 10px;
     padding-right: 10px;
-}
-
-.travel:hover {
-    border: 4px solid #301934;
-    background-color: #FFB6C1;
 }
 
 a.active {
@@ -256,37 +271,6 @@ img {
     margin: 0px;
 }
 
-.button {
-    background-color: #fbeee0;
-    border: 2px solid #8ba888;
-    border-radius: 30px;
-    box-shadow: #8ba888 4px 4px 0 0;
-    color: #422800;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 500;
-    font-size: 15px;
-    padding: 0 2px;
-    line-height: 50px;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    margin-bottom: 20px;
-    margin-left: 5px;
-}
-
-.button:hover {
-    border: 2px solid #8ba888;
-    background-color: #FFB6C1;
-}
-
-.button:active {
-    box-shadow: #422800 2px 2px 0 0;
-    transform: translate(2px, 2px);
-}
-
 @media (prefers-color-scheme: dark) {
     h1 {
         color: white;
@@ -320,15 +304,11 @@ img {
         color: #ADD8E6;
     }
 
-    .button {
+    button {
         background-color: #013220;
     }
 
-    a.active {
-        color: #FFFFED;
-    }
-
-    .button:hover {
+    button:hover {
         border: 4px solid #8ba888;
         background-color: #5C4033;
     }
@@ -343,26 +323,6 @@ img {
         align-items: center;
         margin-bottom: 30px;
         margin-top: 10px;
-    }
-
-    .home {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .pets {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .recipe {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .travel {
-        padding-left: 40px;
-        padding-right: 40px;
     }
 
     .first-pet-pic {
@@ -398,14 +358,6 @@ img {
         margin-bottom: 80px;
         align-items: center;
         align-content: center;
-    }
-
-    .button-spacing {
-        margin: 30px;
-        font-size: 15px;
-        display: block;
-        text-align: right;
-        padding: 8px;
     }
 
     .first-grid {
@@ -444,9 +396,10 @@ img {
         margin-right: 30px;
         margin-bottom: 80px;
     }
-    .button {
+
+    button {
         font-size: 25px;
-        padding: 0 50px;
+        padding: 5px 35px; 
         margin-bottom: 20px;
         margin-left: 10px;
     }
@@ -489,26 +442,6 @@ img {
         margin-top: 10px;
     }
 
-    .home {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .pets {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .recipe {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
-    .travel {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-
     .pet-div {
         display: grid;
         grid-template-columns: .05fr 1fr .05fr; 
@@ -540,14 +473,6 @@ img {
     .gallery-photo {
         width: 160px;
         height: 180px;
-    }
-
-    .button-spacing {
-        margin: 30px;
-        font-size: 15px;
-        display: block;
-        text-align: right;
-        padding: 8px;
     }
 
     .first-grid {
@@ -606,9 +531,10 @@ img {
         row-gap: 10px;
         align-items: center;
     }
-    .button {
+
+    button {
         font-size: 35px;
-        padding: 0 50px;
+        padding: 10px 45px;
         margin-bottom: 20px;
         margin-left: 10px;
     }
